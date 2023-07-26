@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>seventhpage</title>
+</head>
+
+<body>
+  <!-- navbar starts -->
+  <nav>
+    <!-- Sidenav -->
+    <div style="width: 0; transition: 0.8s; transition-timing-function:ease;" id="sideNav"
+      class="absolute h-full hidden min-h-fit right-0 z-10 shadow-lg bg-[#f14435]">
+
+      <!-- upper div  -->
+      <div class="w-10 h-fit flex justify-center">
+        <button onclick="closeNav()"><img class="hover:opacity-75" src="./assets/images/side-nav/cross.png"
+            alt="cross"></button>
+      </div>
+
+      <!-- lower div -->
+      <div class="flex flex-col ml-10">
+        <div>
+          <div class="flex items-center h-[70px]">
+            <div class="bg-white rounded-l-[5px] h-[50px] w-[50px] flex items-center justify-center">
+              <img src="./assets/images/side-nav/search-icon.png" class="h-[20px] w-[20px]" alt="search-icon" />
+            </div>
+
+            <div>
+              <select class="w-[187.3425px] focus:outline-none bg-white h-[50px] rounded-r-[5px] text-lg font-semibold"
+                name="country" id="country">
+                <option value="india">India</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <input placeholder="   Find cars, Mobile phones and more.."
+            class="h-[50px] focus:outline-none pl-5 pr-5 w-[200px] min-[350px]:w-[250px] min-[500px]:w-[350px] mt-[10px] rounded-l-[5px]"
+            type="text" />
+
+          <div class="bg-[#FDEBE7] h-[50px] w-[58.055px] mt-[10px] rounded-r-[5px] flex place-content-center">
+            <button class="">
+              <img src="./assets/images/side-nav/search-icon.png" class="h-[24.375px] w-[24.375px]" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <div class="h-[70px] flex -ml-1">
+          <select name="country" class="bg-transparent text-xl hover:opacity-70 cursor-pointer text-white font-[600]">
+            <option value="English" class="">English</option>
+          </select>
+        </div>
+
+        <div>
+          <button class="text-white text-[17px] font-[600] hover:opacity-90">
+            <div class="border-b-[1px]">Login</div>
+          </button>
+        </div>
+
+        <div>
+          <a href="./sell.html"> <button
+              class="bg-white w-[100px] h-[51px] rounded-[30px] mt-6 font-[600] text-lg shadow-lg border-[4px] -ml-1 hover:opacity-95">
+              <span class="text-xl font-bold">+</span> SELL
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Main Navbar -->
+    <!-- uppernavbar -->
+
+    <div id="navId" class="flex  w-full justify-center h-[70px] bg-[#f14435]  ">
+      <div class="flex justify-center max-[1130px]:justify-between max-w-[1256.72px] w-[85vw] space-x-7 ">
+
+        <div class=" hover:opacity-90 flex justify-center items-center">
+          <a href="./index.html"><img class="h-[50px] w-[50px]" src="./assets/images/navbar/uphello.png"
+              alt="Logo" /></a>
+        </div>
+
+        <!-- hamburger icon starts -->
+        <div class="hidden max-[1130px]:flex">
+          <button onclick="openNav()"><img class="w-8 h-8 hover:opacity-75" src="./assets/images/navbar/hamburger.png"
+              alt="hamburger"></button>
+        </div>
+        <!-- hamburger icon ends  -->
+
+        <div class="w-[60%] flex justify-around items-center max-[1130px]:hidden">
+
+          <div class="w-[30%]">
+            <div class="flex items-center h-[70px] w-full">
+              <div class="bg-white rounded-l-[5px] h-[50px] w-[50px] flex items-center justify-center">
+                <img src="./assets/images/navbar/search-icon.png" class="h-[20px] w-[20px]" alt="search-icon" />
+              </div>
+
+              <div class="w-full">
+                <select
+                  class="w-full text-gray-700 h-[50px] bg-white rounded-r-[5px] text-lg font-semibold focus:outline-none"
+                  name="country" id="country">
+                  <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center items-center w-[65%]">
+            <input placeholder="   Find cars, Mobile phones and more.."
+              class="h-[50px] w-full rounded-l-[5px] focus:outline-none pl-5 pr-5" type="text" />
+
+            <div class="bg-[#FDEBE7] h-[50px] w-[58.055px] rounded-r-[5px] flex place-content-center">
+              <button class="hover:opacity-50">
+                <img src="./assets/images/navbar/search-icon.png " class="h-[24.375px] w-[24.375px]" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-[30%] flex justify-around items-center max-[1130px]:hidden">
+          <div class="w-[30%] flex justify-center">
+            <select name="country"
+              class="bg-transparent text-[21px] cursor-pointer hover:opacity-80 focus:outline-none text-white font-[600]">
+              <option value="English" class="text-base">English</option>
+            </select>
+          </div>
+
+          <div class="w-[30%] flex justify-center">
+            <button class="text-white text-[17px] font-[600] hover:opacity-80">
+              <div class="hover:border-b-[1px]">Login</div>
+            </button>
+          </div>
+
+          <div class="w-[30%] flex justify-center flex-col">
+            <a href="./sell.html"> <button class="bg-white w-full h-[51px] shadow-lg
+                         rounded-[30px] font-[600] text-lg border-[4px] -ml-1 hover:opacity-95">
+                <span class="text-xl font-bold">+</span> SELL
+              </button>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Lower navbar -->
+    <div class="flex justify-center items-center shadow-lg bg-[#F8F3F3] w-full">
+
+      <div class="flex max-[1130px]:flex-col min-[1131px]:items-center text-base gap-5 max-w-[1256.72px] w-[85vw] py-3">
+
+        <div>
+          <select name="category"
+            class="bg-transparent max-[1130px]:mt-3 max-[1130px]:-ml-1 text-[#F14435] hover:text-gray-900 text-lg cursor-pointer focus:outline-none font-semibold">
+            <option class="text-base" value="all-category">All Category</option>
+          </select>
+        </div>
+
+        <div>
+          <a href="./cars.html"><button class="text-slate-600 hover:text-[#f14435]">Cars</button></a>
+        </div>
+
+        <div>
+          <a href="./bikes.html"><button class="text-slate-600 hover:text-[#f14435]">Motorcycles</button></a>
+        </div>
+
+        <div>
+          <a href="./mobiles.html"><button class="text-slate-600 hover:text-[#f14435]">Mobile
+              Phones</button></a>
+        </div>
+
+        <div>
+          <a href="./houses.html"><button class="text-slate-600 hover:text-[#f14435]">For
+              Sale:
+              Houses &
+              Appartments</button></a>
+        </div>
+
+        <div>
+          <a href="./scooters.html"><button class="text-slate-600 hover:text-[#f14435]">Scooters</button></a>
+        </div>
+
+        <div>
+          <a href=""><button class="text-slate-600 hover:text-[#f14435]">Commercial &
+              Other
+              Vehicles</button></a>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+  <!-- navbar ends  -->
+
+  <!-- carousel starts  -->
+  <!-- middle section starts  -->
+  <div class="w-full flex justify-center mt-20">
+    <div class="w-[90%] max-w-[1256.72px] bg-black rounded-md">
+      <div class="relative w-full flex justify-center">
+
+        <!-- previous button  -->
+        <button onclick="prevImg()"><img class="absolute w-8 left-4 top-auto"
+            src="./assets/images/details-page/prev.png" alt=""></button>
+
+        <!-- images start -->
+
+        <div style="display: block;" class="slides w-[750px] h-auto">
+          <img src="./assets/images/details-page/car1.jpg" alt="">
+        </div>
+        <div style="display: none;" class="slides w-[750px] h-auto">
+          <img src="./assets/images/details-page/car2.jpg" alt="">
+        </div>
+        <div style="display: none;" class="slides w-[750px] h-auto">
+          <img src="./assets/images/details-page/car3.jpg" alt="">
+        </div>
+
+        <!-- images end -->
+
+        <!-- like share buttons  -->
+        <div class="absolute right-8 top-5">
+          <div class="flex gap-x-8">
+            <button><img class="w-8" src="./assets/images/details-page/share-icon.png" alt=""></button>
+            <button><img class="w-8" src="./assets/images/details-page/heart-icon.png" alt=""></button>
+          </div>
+        </div>
+
+        <!-- next button  -->
+        <button onclick="nextImg(+1)"><img class="absolute w-8 right-4 top-auto"
+            src="./assets/images/details-page/next.png" alt=""></button>
+
+      </div>
+    </div>
+  </div>
+  <!-- carousel ends  -->
+
+  <!--Big Div-->
+  <div class="w-full max-w-[1300px] flex flex-col sm:flex-col md:flex-col 2xl:flex-col justify-center">
+    <div class="flex flex-col lg:flex-row justify-center space-y-20">
+      <!--Left div-->
+      <div class="flex flex-col space-y-10 mt-20  justify-center md:justify-start relative px-8 pb-16">
+        <div class="flex flex-col border solid color border-[#FDEBE7] bg-[#FDEBE7]">
+          <h1 class="flex mt-[30px] text-3xl text-slate-800 mb-1 mx-3">BMW (2018)</h1>
+          <p class="text-sm text-slate-500 mt-[20px] mx-4">
+            1.5 Ti-Vct Titanium Plus
+          </p>
+          <div class="flex space-x-6">
+            <p class=" font-mono mx-4 my-4">
+              <i class="fa-solid fa-gas-pump text-slate-600"></i>Diesel
+            </p>
+
+            <p class=" font-mono my-4">
+              <i class="fa-solid fa-gauge text-slate-600"></i>
+              5341.00KM
+            </p>
+            <p class=" font-mono my-4">
+              <i class="fa-solid fa-gear text-slate-600"></i>
+              Automatic
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex md:items-center justify-center md:justify-start flex-col border 1px solid color border-[#FDEBE7] bg-[#FDEBE7]">
+
+          <h1 class="flex flex-col md:justify-start md:mx-6 text-3xl text-slate-800  pt-8 md:mr-auto">OVERVIEW</h1>
+
+          <hr class="border mt-[10px] border-[#A6A6A6]" />
+
+          <div class="w-full flex justify-center md:justify-start">
+            <div class="flex flex-col justify-center md:flex-row md:mx-6 md:space-x-8">
+              <div>
+                <h1 class="">
+                  <i class="fa-solid fa-user text-slate-600"></i> OWNER
+                  <p class="text-sm text-slate-500 md:mx-6">1st</p>
+                </h1>
+              </div>
+
+              <div>
+                <h1 class=" ">
+                  <i class="fa-solid fa-location-dot text-slate-600"></i>
+                  Location
+                  <p class="text-sm text-slate-500 md:mx-6">India</p>
+                </h1>
+              </div>
+
+              <div>
+                <h1 class="">
+                  <i class="fa-solid fa-calendar-days text-slate-600"></i>Posting
+                  Date
+                  <p class="text-sm text-slate-500 md:mx-6">05 MAY 2023</p>
+                </h1>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="flex flex-col sm:flex-col border 1px solid to-black bg-[#FDEBE7] ">
+          <h1 class="text-3xl text-slate-800 my-6 ml-[30px]">DETAIL</h1>
+          <p class="my-10 ml-[30px] text-[#656161] border 2px ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+            deleniti dolorem nulla quidem quas? Fugiat odit veniam accusamus
+            et reiciendis corporis perferendis quia. Dolores, iste harum
+            cupiditate reiciendis cum recusandae provident repudiandae
+            incidunt cumque inventore aliquam rem dicta vero dolorem quo
+            quibusdam ipsum tempore deserunt hic ex! Consequuntur, vitae nisi
+            asperiores neque quisquam consequatur nobis eius!
+          </p>
+        </div>
+      </div>
+
+      <!--Right div-->
+      <div class="flex flex-col space-y-6 ">
+        <div
+          class="w-[380px] h-[150px] border flex-col flex items-center justify-center bg-[#FDEBE7] font-extrabold rounded-md">
+          <i class="fa fa-inr text-3xl text-slate-800" aria-hidden="true">20,69,000</i>
+          <div class="justify-center flex">
+            <button
+              class="bg-white hover:bg-red-200 text-slate-800 py-4 px-32 border border-slate-100 rounded-md flex flex-col">
+              Make Offer
+            </button>
+          </div>
+        </div>
+        <div class="border flex flex-col items-center bg-[#FDEBE7] font-semibold rounded-md w-[380px] h-[200px]">
+          <div class="flex items-center justify-center mr-40">
+            <img class="scale-50" src="./assets/images/seventh-page/Picture2.png" alt="" />
+            <p class="flex flex-col justify-center items-center text-3xl text-slate-800">seller</p>
+          </div>
+          <div class="flex flex-col justify-center">
+            <button class=" bg-white hover:bg-red-200 text-slate-800 border border-slate-100 rounded py-2 px-20 ">
+              Chat With Seller
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- middle section ends  -->
+
+  <!-- footer starts  -->
+  <!--Fotter-->
+  <footer class="w-full mt-20">
+    <!--First Footer-->
+    <div class="bg-[#FDEBE7E3] w-full flex justify-center pb-10 md:pb-0 ">
+
+      <div class="w-[90vw] max-w-[1256.72px] flex justify-center">
+
+        <div class="flex md:w-full flex-col md:flex-row md:justify-between gap-x-2">
+          <div class="max-[320px]:overflow-hidden">
+            <img class="w-80 xl:w-96" src="./assets/images/footer/footer hello.png" alt />
+          </div>
+
+          <div class="flex justify-center items-center w-80 xl:w-[28rem] max-w-full ">
+            <div>
+              <h4 class="flex font-bold text-slate-800 text-xl lg:text-2xl xl:text-3xl mb-2 xl:mb-4 mt-7 md:mt-0">
+                TRY
+                THE
+                UP HELLO APP</h4>
+              <p class="text-sm xl:text-lg">
+                Buy, Sell and find just about anything using the app on your Mobile
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-center mt-7 md:mt-0 ">
+            <div>
+              <h4 class="font-medium text-slate-900 text-base xl:text-lg mb-2 xl:mb-4">
+                GET YOUR APP TODAY
+              </h4>
+
+              <div class="flex gap-x-2">
+
+                <a href="#">
+                  <img class="w-32" src="./assets/images/footer/bigger-playstore.webp" alt="">
+                </a>
+
+                <a href="#">
+                  <img class="w-32" src="./assets/images/footer/bigger-appstore.webp" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <!--Second Footer-->
+    <div class="w-full bg-[#FFDFD8] flex justify-center">
+      <div class="w-[90vw] max-w-[1256.72px] flex justify-center">
+        <div class="w-full flex flex-wrap gap-16 mt-4 mb-6 md:justify-between md:gap-0">
+          <div class="">
+            <h1 class="font-semibold text-base text-slate-800">POPULAR LOCATION</h1>
+            <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Kolkata</p>
+            <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Delhi</p>
+            <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">UttarPardesh</p>
+            <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Haryana</p>
+          </div>
+
+          <div class="">
+            <h1 class="font-semibold text-base text-slate-800">TRADING LOCATION</h1>
+            <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Mumbai</p>
+            <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Rajasthan</p>
+            <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Punjab</p>
+            <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Kolkata</p>
+          </div>
+
+          <div class="">
+            <h1 class="font-semibold text-base text-slate-800">ABOUT US</h1>
+            <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">About UP HELLO</p>
+            <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Contact Us</p>
+          </div>
+
+          <div class="">
+            <h1 class="font-semibold text-base text-slate-800">UP HELLO</h1>
+            <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Help</p>
+            <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Privacy & Policy</p>
+            <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Blog</p>
+          </div>
+
+          <div class="mr-14">
+            <h1 class="font-semibold text-base text-slate-800 mb-2 text-center">FOLLOW US</h1>
+            <div class="flex gap-x-2">
+              <a href="#"><img class="w-7 h-7 hover:opacity-70 cursor-pointer" src="./assets/images/footer/fb-icon.png"
+                  alt="facebook icon">
+              </a>
+              <a href="#"><img class="w-7 h-7 hover:opacity-70 cursor-pointer"
+                  src="./assets/images/footer/twitte-icon.png" alt="twitter icon">
+              </a>
+              <a href="#"><img class="w-7 h-7 hover:opacity-70 cursor-pointer"
+                  src="./assets/images/footer/insta-icon.png" alt="instagram icon">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Third Footer-->
+
+    <div class="bg-[#F14435] h-[80px] w-full flex justify-center items-center">
+      <p class="text-base text-white opacity-80">
+        All right reserve@2023-2029 UP Hello
+      </p>
+    </div>
+  </footer>
+
+  <!-- footer ends  -->
+
+  <script src="./assets/js/seventhpage.js"></script>
+  <script src="./assets/js/navbar.js"></script>
+  <script src="./assets/js/details-page.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UP Hello</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- navbar starts -->
+    <nav>
+        <!-- Sidenav -->
+        <div style="width: 0; transition: 0.8s; transition-timing-function:ease;" id="sideNav"
+            class="absolute h-full hidden min-h-fit right-0 z-10 shadow-lg bg-[#f14435]">
+
+            <!-- upper div  -->
+            <div class="w-10 h-fit flex justify-center">
+                <button onclick="closeNav()"><img class="hover:opacity-75" src="./assets/images/side-nav/cross.png"
+                        alt="cross"></button>
+            </div>
+
+            <!-- lower div -->
+            <div class="flex flex-col ml-10">
+                <div>
+                    <div class="flex items-center h-[70px]">
+                        <div class="bg-white rounded-l-[5px] h-[50px] w-[50px] flex items-center justify-center">
+                            <img src="./assets/images/side-nav/search-icon.png" class="h-[20px] w-[20px]"
+                                alt="search-icon" />
+                        </div>
+
+                        <div>
+                            <select
+                                class="w-[187.3425px] focus:outline-none bg-white h-[50px] rounded-r-[5px] text-lg font-semibold"
+                                name="country" id="country">
+                                <option value="india">India</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <input placeholder="   Find cars, Mobile phones and more.."
+                        class="h-[50px] focus:outline-none pl-5 pr-5 w-[200px] min-[350px]:w-[250px] min-[500px]:w-[350px] mt-[10px] rounded-l-[5px]"
+                        type="text" />
+
+                    <div class="bg-[#FDEBE7] h-[50px] w-[58.055px] mt-[10px] rounded-r-[5px] flex place-content-center">
+                        <button class="">
+                            <img src="./assets/images/side-nav/search-icon.png" class="h-[24.375px] w-[24.375px]"
+                                alt="" />
+                        </button>
+                    </div>
+                </div>
+
+                <div class="h-[70px] flex -ml-1">
+                    <select name="country"
+                        class="bg-transparent text-xl hover:opacity-70 cursor-pointer text-white font-[600]">
+                        <option value="English" class="">English</option>
+                    </select>
+                </div>
+
+                <div>
+                    <button class="text-white text-[17px] font-[600] hover:opacity-90">
+                        <div class="border-b-[1px]">Login</div>
+                    </button>
+                </div>
+
+                <div>
+                    <a href="./sell.html"> <button
+                            class="bg-white w-[100px] h-[51px] rounded-[30px] mt-6 font-[600] text-lg shadow-lg border-[4px] -ml-1 hover:opacity-95">
+                            <span class="text-xl font-bold">+</span> SELL
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Main Navbar -->
+        <!-- uppernavbar -->
+
+        <div id="navId" class="flex  w-full justify-center h-[70px] bg-[#f14435]  ">
+            <div class="flex justify-center max-[1130px]:justify-between max-w-[1256.72px] w-[85vw] space-x-7 ">
+
+                <div class=" hover:opacity-90 flex justify-center items-center">
+                    <a href="./index.html"><img class="h-[50px] w-[50px]" src="./assets/images/navbar/uphello.png"
+                            alt="Logo" /></a>
+                </div>
+
+                <!-- hamburger icon starts -->
+                <div class="hidden max-[1130px]:flex">
+                    <button onclick="openNav()"><img class="w-8 h-8 hover:opacity-75"
+                            src="./assets/images/navbar/hamburger.png" alt="hamburger"></button>
+                </div>
+                <!-- hamburger icon ends  -->
+
+                <div class="w-[60%] flex justify-around items-center max-[1130px]:hidden">
+
+                    <div class="w-[30%]">
+                        <div class="flex items-center h-[70px] w-full">
+                            <div class="bg-white rounded-l-[5px] h-[50px] w-[50px] flex items-center justify-center">
+                                <img src="./assets/images/navbar/search-icon.png" class="h-[20px] w-[20px]"
+                                    alt="search-icon" />
+                            </div>
+
+                            <div class="w-full">
+                                <select
+                                    class="w-full text-gray-700 bg-white h-[50px] rounded-r-[5px] text-lg font-semibold focus:outline-none"
+                                    name="country" id="country">
+                                    <option value="india">India</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center items-center w-[65%]">
+                        <input placeholder="   Find cars, Mobile phones and more.."
+                            class="h-[50px] w-full rounded-l-[5px] focus:outline-none pl-5 pr-5" type="text" />
+
+                        <div class="bg-[#FDEBE7] h-[50px] w-[58.055px] rounded-r-[5px] flex place-content-center">
+                            <button class="hover:opacity-50">
+                                <img src="./assets/images/navbar/search-icon.png " class="h-[24.375px] w-[24.375px]"
+                                    alt="" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-[30%] flex justify-around items-center max-[1130px]:hidden">
+                    <div class="w-[30%] flex justify-center">
+                        <select name="country"
+                            class="bg-transparent text-[21px] cursor-pointer hover:opacity-80 focus:outline-none text-white font-[600]">
+                            <option value="English" class="text-base">English</option>
+                        </select>
+                    </div>
+
+                    <div class="w-[30%] flex justify-center">
+                        <button class="text-white text-[17px] font-[600] hover:opacity-80">
+                            <div class="hover:border-b-[1px]">Login</div>
+                        </button>
+                    </div>
+
+                    <div class="w-[30%] flex justify-center flex-col">
+                        <a href="./sell.html"> <button class="bg-white w-full h-[51px] shadow-lg
+                             rounded-[30px] font-[600] text-lg border-[4px] -ml-1 hover:opacity-95">
+                                <span class="text-xl font-bold">+</span> SELL
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Lower navbar -->
+        <div class="flex justify-center items-center shadow-lg bg-[#F8F3F3] w-full">
+
+            <div
+                class="flex max-[1130px]:flex-col min-[1131px]:items-center text-base gap-5 max-w-[1256.72px] w-[85vw] py-3">
+
+                <div>
+                    <select name="category"
+                        class="bg-transparent max-[1130px]:mt-3 max-[1130px]:-ml-1 text-[#F14435] hover:text-gray-900 text-lg cursor-pointer focus:outline-none font-semibold">
+                        <option class="text-base" value="all-category">All Category</option>
+                    </select>
+                </div>
+
+                <div>
+                    <a href="./cars.html"><button class="text-slate-600 hover:text-[#f14435]">Cars</button></a>
+                </div>
+
+                <div>
+                    <a href="./bikes.html"><button class="text-slate-600 hover:text-[#f14435]">Motorcycles</button></a>
+                </div>
+
+                <div>
+                    <a href="./mobiles.html"><button class="text-slate-600 hover:text-[#f14435]">Mobile
+                            Phones</button></a>
+                </div>
+
+                <div>
+                    <a href="./houses.html"><button class="text-slate-600 hover:text-[#f14435]">For
+                            Sale:
+                            Houses &
+                            Appartments</button></a>
+                </div>
+
+                <div>
+                    <a href="./scooters.html"><button class="text-slate-600 hover:text-[#f14435]">Scooters</button></a>
+                </div>
+
+                <div>
+                    <a href=""><button class="text-slate-600 hover:text-[#f14435]">Commercial &
+                            Other
+                            Vehicles</button></a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar ends -->
+
+    <!-- Buy and sell -->
+    <div class="flex justify-center mt-12">
+        <div class="w-[92vw] max-w-[1256.72px]">
+            <h1 class="text-3xl font-medium">Buy & Sell Car</h1>
+        </div>
+    </div>
+
+    <div class="flex w-full justify-center mt-10 ">
+        <div id="main-div" class="w-[92vw] flex max-w-[1256.72px] max-[644px]:flex-col justify-center">
+            <!-- left div  -->
+            <div id="main-div-left" class="flex flex-col justify-center items-center h-fit mb-20">
+                <!-- Category -->
+                <div class="w-[307px] h-[165px] shadow-[0px_2px_2px_0px_#00000040] flex justify-center items-center">
+                    <div class="w-[280px] h-[140px]">
+                        <h1 class="text-xl font-medium ">CATEGORY</h1>
+                        <div class="flex mt-4 items-center">
+                            <div class="w-6 h-[0.125rem] bg-black mr-1"></div>
+                            <div class="text-base font-medium leading-4"><button>ALL CATEGORY</button></div>
+                        </div>
+                        <div class="bg-[#FDEBE7] hover:opacity-80">
+                            <h1 class="text-xl text-[inter] font-medium ml-2 mt-4 cursor-pointer">CAR</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location -->
+                <div class="w-[307px] h-[165px] shadow-[0px_2px_2px_0px_#00000040] flex justify-center items-center">
+                    <div class="w-[280px] h-[140px]">
+                        <h1 class="text-xl font-medium">LOCATION</h1>
+
+                        <div class="flex mt-4 items-center">
+                            <div class="w-6 h-[0.125rem] bg-slate-600 mr-1"></div>
+                            <div
+                                class="text-base text-slate-600 font-medium font-[Inter] leading-4 hover:text-slate-800">
+                                <button>DELHI</button>
+                            </div>
+                        </div>
+
+                        <div class="flex mt-3 items-center">
+                            <div class="w-6 h-[0.125rem] bg-slate-600 mr-1"></div>
+                            <div
+                                class="text-base text-slate-600 font-medium font-[Inter] leading-4 hover:text-slate-800">
+                                <button>MUMBAI</button>
+                            </div>
+                        </div>
+
+                        <div class="flex mt-3 items-center">
+                            <div class="w-6 h-[0.125rem] bg-slate-600 mr-1"></div>
+                            <div
+                                class="text-base text-slate-600 font-medium font-[Inter] leading-4 hover:text-slate-800">
+                                <button>PUNJAB</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Brand and model -->
+
+                <div
+                    class="w-[307px] h-[250px] shadow-[0px_2px_2px_0px_#00000040] mt-5 flex justify-center items-center">
+                    <div class="w-[280px]">
+                        <h1 class="text-xl text-[Inter] font-medium uppercase">Brand & Model</h1>
+                        <div class="w-full flex justify-center mt-3">
+                            <input class="w-[270px] pl-2 border-[1px] placeholder:text-sm border-[#D9D9D9]"
+                                placeholder="  Search brand or model" type="text" name="brand" id="brand">
+                        </div>
+                        <div>
+                            <h1 class="uppercase text-base font-medium mt-3 ml-[5px]">Popular brand</h1>
+                        </div>
+                        <div class="w-full flex justify-center mt-3">
+                            <div class="flex w-[260px] justify-between">
+                                <button><img class="w-[54px]" src="./assets/images/cars-page/suzuki.png"
+                                        alt="suzuki"></button>
+                                <button><img class="w-[54px]" src="./assets/images/cars-page/hyundai.png"
+                                        alt="hyundai"></button>
+                                <button><img class="w-[54px]" src="./assets/images/cars-page/mahindra.png"
+                                        alt="mahindra"></button>
+                            </div>
+                        </div>
+                        <div class="w-full flex justify-center mt-4 mb-5">
+                            <div class="flex w-[260px] justify-between">
+                                <button><img class="w-[54px]" src="./assets/images/cars-page/toyota.png"
+                                        alt="toyota.png"></button>
+                                <button><img class="w-[54px]" src="./assets/images/cars-page/tata.png"
+                                        alt="tata"></button>
+                                <button><img class="w-[54px]" src="./assets/images/cars-page/honda.png"
+                                        alt="honda"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Budget -->
+                <div class="w-[307px] shadow-[0px_2px_2px_0px_#00000040] mt-5 flex justify-center">
+                    <div class="w-[280px]">
+                        <h1 class="text-xl text-[Inter] font-medium uppercase">Budget</h1>
+                        <p class="ml-1 uppercase text-xs text-[Inter] font-medium text-[#656161] mt-7">Choose from
+                            option
+                            below</p>
+                        <div class="w-full flex justify-center">
+                            <button
+                                class="w-full h-7 mt-7 ml-1 rounded-[0.25rem] text-left border-[1px] text-xs text-[#0000005C] font-medium border-[#A6A6A6]">
+                                &nbsp; &nbsp; Below 2 lac</button>
+                        </div>
+                        <div class="w-full flex justify-center">
+                            <button
+                                class="w-full h-7 mt-3 ml-1 rounded-[0.25rem] text-left border-[1px] text-xs text-[#0000005C] font-medium border-[#A6A6A6]">
+                                &nbsp; &nbsp; 1Lac - 2Lac</button>
+                        </div>
+                        <div class="w-full flex justify-center">
+                            <button
+                                class="w-full h-7 mt-3 ml-1 rounded-[0.25rem] text-left border-[1px] text-xs text-[#0000005C] font-medium border-[#A6A6A6]">
+                                &nbsp; &nbsp; 2Lac - 3Lac</button>
+                        </div>
+                        <div class="w-full flex justify-center">
+                            <button
+                                class="w-full h-7 mt-3 ml-1 rounded-[0.25rem] text-left border-[1px] text-xs text-[#0000005C] font-medium border-[#A6A6A6]">
+                                &nbsp; &nbsp; 3Lac - 5Lac</button>
+                        </div>
+                        <div class="w-full flex justify-center">
+                            <button
+                                class="w-full mb-[4.5rem] h-7 mt-3 ml-1 rounded-[0.25rem] text-left border-[1px] text-xs text-[#0000005C] font-medium border-[#A6A6A6]">
+                                &nbsp; &nbsp; 5Lac & Above</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year -->
+                <div class="w-[307px] shadow-[0px_2px_2px_0px_#00000040] mt-5 flex justify-center">
+                    <div class="w-[280px]">
+                        <h1 class="text-xl text-[Inter] font-medium uppercase">YEAR</h1>
+                        <p class="ml-1 uppercase text-xs text-[Inter] font-medium text-[#656161] mt-7">Choose from
+                            option
+                            below</p>
+                        <div class="w-full flex justify-center">
+                            <button
+                                class="w-full h-7 mt-7 ml-1 rounded-[0.25rem] text-left border-[1px] text-xs text-[#0000005C] font-medium border-[#A6A6A6]">
+                                &nbsp; &nbsp; Under 3 Year</button>
+                        </div>
+                        <div class="w-full flex justify-center">
+                            <button
+                                class="w-full h-7 mt-3 ml-1 rounded-[0.25rem] text-left border-[1px] text-xs text-[#0000005C] font-medium border-[#A6A6A6]">
+                                &nbsp; &nbsp; Under 5 Year</button>
+                        </div>
+                        <div class="w-full flex justify-center">
+                            <button
+                                class="w-full h-7 mt-3 ml-1 rounded-[0.25rem] text-left border-[1px] text-xs text-[#0000005C] font-medium border-[#A6A6A6]">
+                                &nbsp; &nbsp; Under 7 Year</button>
+                        </div>
+                        <div class="w-full flex justify-center">
+                            <button
+                                class="w-full h-7 mt-3 ml-1 rounded-[0.25rem] text-left border-[1px] text-xs text-[#0000005C] font-medium border-[#A6A6A6]">
+                                &nbsp; &nbsp; 7 Year & Above</button>
+                        </div>
+                        <p class="ml-1 uppercase text-xs text-[Inter] font-medium text-[#656161] mt-7">Choose from Range
+                            below</p>
+
+                        <form action="">
+                            <div class="w-full flex justify-between items-center mt-5 mb-[4.5rem]">
+                                <input
+                                    class="w-1/5 rounded-[0.25rem] ml-2 text-left border-[1px] h-[20px] border-[#0000005C] placeholder:text-center placeholder:text-xs"
+                                    placeholder="2023" min="2023">
+                                <p class="text-xs font-[Inter] font-medium">To</p>
+                                <input
+                                    class="w-1/5 rounded-[0.25rem] text-left border-[1px] h-[20px] border-[#0000005C] placeholder:text-center placeholder:text-xs"
+                                    placeholder="2023" min="2023">
+                                <button class="bg-[#FDEBE7] w-14 h-6 mr-2">Apply</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- KM Driven -->
+                <div class="w-[307px] shadow-[0px_2px_2px_0px_#00000040] mt-5 flex justify-center">
+                    <div class="w-[280px]">
+                        <h1 class="text-xl text-[Inter] font-medium uppercase">KM Driven</h1>
+                        <p class="ml-1 uppercase text-xs text-[Inter] font-medium text-[#656161] mt-7">Choose from
+                            option
+                            below</p>
+                        <div class="w-full flex justify-center">
+                            <button
+                                class="w-full h-7 mt-7 ml-1 rounded-[0.25rem] text-left border-[1px] text-xs text-[#0000005C] font-medium border-[#A6A6A6]">
+                                &nbsp; &nbsp; Below 25000 km</button>
+                        </div>
+                        <div class="w-full flex justify-center">
+                            <button
+                                class="w-full h-7 mt-3 ml-1 rounded-[0.25rem] text-left border-[1px] text-xs text-[#0000005C] font-medium border-[#A6A6A6]">
+                                &nbsp; &nbsp; 25000km - 50000km</button>
+                        </div>
+                        <div class="w-full flex justify-center">
+                            <button
+                                class="w-full h-7 mt-3 ml-1 rounded-[0.25rem] text-left border-[1px] text-xs text-[#0000005C] font-medium border-[#A6A6A6]">
+                                &nbsp; &nbsp; 50000km - 75000km</button>
+                        </div>
+                        <div class="w-full flex justify-center mb-14">
+                            <button
+                                class="w-full h-7 mt-3 ml-1 rounded-[0.25rem] text-left border-[1px] text-xs text-[#0000005C] font-medium border-[#A6A6A6]">
+                                &nbsp; &nbsp; 75000km & Above</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fuel -->
+                <div class="w-[307px] shadow-[0px_2px_2px_0px_#00000040] mt-5 flex justify-center">
+                    <div class="w-[280px]">
+                        <h1 class="text-xl text-[Inter] font-medium uppercase">KM Driven</h1>
+                        <p class="ml-1 uppercase text-xs text-[Inter] font-medium text-[#656161] mt-7">Choose from
+                            option
+                            below</p>
+                        <div class="flex justify-start items-center ml-2 mt-3">
+                            <input type="checkbox" id="petrol" class="w-7 h-7 rounded-[0.25rem]">
+                            <label for="petrol" class="text-[#A6A6A6] text-sm ml-2 Petrol"> Petrol </label>
+                        </div>
+                        <div class="flex justify-start items-center ml-2 mt-3">
+                            <input type="checkbox" id="diesel" class="w-7 h-7 rounded-[0.25rem]">
+                            <label for="diesel" class="text-[#A6A6A6] text-sm ml-2 Petrol"> Diesel </label>
+                        </div>
+                        <div class="flex justify-start items-center ml-2 mt-3">
+                            <input type="checkbox" id="cng" class="w-7 h-7 rounded-[0.25rem]">
+                            <label for="cng" class="text-[#A6A6A6] text-sm ml-2 Petrol"> CNG </label>
+                        </div>
+                        <div class="flex justify-start items-center ml-2 mt-3 mb-12">
+                            <input type="checkbox" id="electric" class="w-7 h-7 rounded-[0.25rem]">
+                            <label for="electric" class="text-[#A6A6A6] text-sm ml-2 Petrol"> Electric </label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- right div  -->
+            <div class="w-full flex justify-center">
+                <div class="flex h-fit w-fit justify-center flex-wrap gap-5">
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-[281px] bg-[#FDEBE7] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
+                        <a href="seventhpage.html">
+                            <div class="relative">
+                                <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
+                                    src="./assets/images/index-page/fav-btn.png" alt="">
+                                <img class="w-full h-[132px] aspect-video object-cover"
+                                    src="assets/images/cars-page/car-img.png" alt="Bike image" />
+                            </div>
+                            <div class="m-2">
+                                <h3 class="font-medium mb-2">₹ 9000</h3>
+                                <p class="text-sm text-slate-500">2023-0 Km</p>
+                                <p class="text-xs text-slate-500 line-clamp-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni?
+                                </p>
+                            </div>
+                            <small class="block text-right text-xs text-slate-400">May 18</small>
+                        </a>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- footer starts  -->
+    <!--Fotter-->
+    <footer class="w-full mt-20">
+        <!--First Footer-->
+        <div class="bg-[#FDEBE7E3] w-full flex justify-center pb-10 md:pb-0 ">
+
+            <div class="w-[90vw] max-w-[1256.72px] flex justify-center">
+
+                <div class="flex md:w-full flex-col md:flex-row md:justify-between gap-x-2">
+                    <div class="max-[320px]:overflow-hidden">
+                        <img class="w-80 xl:w-96" src="./assets/images/footer/footer hello.png" alt />
+                    </div>
+
+                    <div class="flex justify-center items-center w-80 xl:w-[28rem] max-w-full ">
+                        <div>
+                            <h4
+                                class="flex font-bold text-slate-800 text-xl lg:text-2xl xl:text-3xl mb-2 xl:mb-4 mt-7 md:mt-0">
+                                TRY
+                                THE
+                                UP HELLO APP</h4>
+                            <p class="text-sm xl:text-lg">
+                                Buy, Sell and find just about anything using the app on your Mobile
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center mt-7 md:mt-0 ">
+                        <div>
+                            <h4 class="font-medium text-slate-900 text-base xl:text-lg mb-2 xl:mb-4">
+                                GET YOUR APP TODAY
+                            </h4>
+
+                            <div class="flex gap-x-2">
+
+                                <a href="#">
+                                    <img class="w-32" src="./assets/images/footer/bigger-playstore.webp" alt="">
+                                </a>
+
+                                <a href="#">
+                                    <img class="w-32" src="./assets/images/footer/bigger-appstore.webp" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!--Second Footer-->
+        <div class="w-full bg-[#FFDFD8] flex justify-center">
+            <div class="w-[90vw] max-w-[1256.72px] flex justify-center">
+                <div class="w-full flex flex-wrap gap-16 mt-4 mb-6 md:justify-between md:gap-0">
+                    <div class="">
+                        <h1 class="font-semibold text-base text-slate-800">POPULAR LOCATION</h1>
+                        <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Kolkata</p>
+                        <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Delhi</p>
+                        <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">UttarPardesh</p>
+                        <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Haryana</p>
+                    </div>
+
+                    <div class="">
+                        <h1 class="font-semibold text-base text-slate-800">TRADING LOCATION</h1>
+                        <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Mumbai</p>
+                        <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Rajasthan</p>
+                        <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Punjab</p>
+                        <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Kolkata</p>
+                    </div>
+
+                    <div class="">
+                        <h1 class="font-semibold text-base text-slate-800">ABOUT US</h1>
+                        <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">About UP HELLO</p>
+                        <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Contact Us</p>
+                    </div>
+
+                    <div class="">
+                        <h1 class="font-semibold text-base text-slate-800">UP HELLO</h1>
+                        <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Help</p>
+                        <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Privacy & Policy</p>
+                        <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Blog</p>
+                    </div>
+
+                    <div class="mr-14">
+                        <h1 class="font-semibold text-base text-slate-800 mb-2 text-center">FOLLOW US</h1>
+                        <div class="flex gap-x-2">
+                            <a href="#"><img class="w-7 h-7 hover:opacity-70 cursor-pointer"
+                                    src="./assets/images/footer/fb-icon.png" alt="facebook icon">
+                            </a>
+                            <a href="#"><img class="w-7 h-7 hover:opacity-70 cursor-pointer"
+                                    src="./assets/images/footer/twitte-icon.png" alt="twitter icon">
+                            </a>
+                            <a href="#"><img class="w-7 h-7 hover:opacity-70 cursor-pointer"
+                                    src="./assets/images/footer/insta-icon.png" alt="instagram icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Third Footer-->
+
+        <div class="bg-[#F14435] h-[80px] w-full flex justify-center items-center">
+            <p class="text-base text-white opacity-80">
+                All right reserve@2023-2029 UP Hello
+            </p>
+        </div>
+    </footer>
+
+    <!-- footer ends  -->
+
+    <script src="./assets/js/navbar.js"></script>
+</body>
+
+</html>
