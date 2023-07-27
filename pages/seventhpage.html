@@ -203,7 +203,7 @@
       <div class="relative w-full flex justify-center">
 
         <!-- previous button  -->
-        <button onclick="prevImg()"><img class="absolute w-8 left-4 top-auto"
+        <button onclick="prevImg()"><img class="absolute w-8 max-[500px]:w-6 left-4 top-auto"
             src="./assets/images/details-page/prev.png" alt=""></button>
 
         <!-- images start -->
@@ -221,15 +221,15 @@
         <!-- images end -->
 
         <!-- like share buttons  -->
-        <div class="absolute right-8 top-5">
-          <div class="flex gap-x-8">
-            <button><img class="w-8" src="./assets/images/details-page/share-icon.png" alt=""></button>
-            <button><img class="w-8" src="./assets/images/details-page/heart-icon.png" alt=""></button>
+        <div class="absolute max-[500px]:right-2 max-[500px]:top-2 right-8 top-5">
+          <div class="flex gap-x-8 max-[500px]:gap-x-6">
+            <button><img class="w-8 max-[500px]:w-6" src="./assets/images/details-page/share-icon.png" alt=""></button>
+            <button><img class="w-8 max-[500px]:w-6" src="./assets/images/details-page/heart-icon.png" alt=""></button>
           </div>
         </div>
 
         <!-- next button  -->
-        <button onclick="nextImg(+1)"><img class="absolute w-8 right-4 top-auto"
+        <button onclick="nextImg(+1)"><img class="absolute w-8 max-[500px]:w-6 right-4 top-auto"
             src="./assets/images/details-page/next.png" alt=""></button>
 
       </div>
@@ -237,105 +237,136 @@
   </div>
   <!-- carousel ends  -->
 
-  <!--Big Div-->
-  <div class="w-full max-w-[1300px] flex flex-col sm:flex-col md:flex-col 2xl:flex-col justify-center">
-    <div class="flex flex-col lg:flex-row justify-center space-y-20">
-      <!--Left div-->
-      <div class="flex flex-col space-y-10 mt-20  justify-center md:justify-start relative px-8 pb-16">
-        <div class="flex flex-col border solid color border-[#FDEBE7] bg-[#FDEBE7]">
-          <h1 class="flex mt-[30px] text-3xl text-slate-800 mb-1 mx-3">BMW (2018)</h1>
-          <p class="text-sm text-slate-500 mt-[20px] mx-4">
-            1.5 Ti-Vct Titanium Plus
-          </p>
-          <div class="flex space-x-6">
-            <p class=" font-mono mx-4 my-4">
-              <i class="fa-solid fa-gas-pump text-slate-600"></i>Diesel
-            </p>
 
-            <p class=" font-mono my-4">
-              <i class="fa-solid fa-gauge text-slate-600"></i>
-              5341.00KM
-            </p>
-            <p class=" font-mono my-4">
-              <i class="fa-solid fa-gear text-slate-600"></i>
-              Automatic
-            </p>
+
+
+
+
+
+
+
+
+
+  <div class="w-full flex justify-center mt-20">
+    <div class="w-[90%] max-w-[1256.72px]">
+      <div class="flex justify-center flex-wrap-reverse gap-10">
+        <!-- left div  -->
+        <div class="flex flex-col flex-wrap gap-y-6">
+
+
+
+          <!-- product div  -->
+          <div class="flex flex-col gap-8 bg-[#FDEBE7] p-5 shadow-sm rounded-sm">
+            <div class="ml-5 max-[500px]:ml-0">
+              <h1 class="text-3xl font-semibold">Audi (2023) </h1>
+              <p class="text-lg font-normal mt-3">Lorem ipsum dolor sit amet.</p>
+            </div>
+
+            <div class="flex gap-5">
+              <div>
+                <img class="inline-block w-4" src="./assets/images/footer/fuel-icon.png" alt="fuel icon">
+                <p class="inline-block text-sm">Diesel</p>
+              </div>
+              <div>
+                <img class="inline-block w-4" src="./assets/images/footer/meter-icon.png" alt="meter icon">
+                <p class="inline-block text-sm">5400.00 KM</p>
+              </div>
+              <div>
+                <img class="inline-block w-4" src="./assets/images/footer/type-icon.png" alt="type icon">
+                <p class="inline-block text-sm">Automatic</p>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div
-          class="flex md:items-center justify-center md:justify-start flex-col border 1px solid color border-[#FDEBE7] bg-[#FDEBE7]">
+          <!-- overview div  -->
+          <div class="md:w-[700px] bg-[#FDEBE7] rounded-sm shadow-sm">
 
-          <h1 class="flex flex-col md:justify-start md:mx-6 text-3xl text-slate-800  pt-8 md:mr-auto">OVERVIEW</h1>
+            <h1 class="text-3xl font-semibold m-3 ml-9">Overview</h1>
 
-          <hr class="border mt-[10px] border-[#A6A6A6]" />
+            <hr class="h-[1.5px] bg-gray-700 opacity-30">
 
-          <div class="w-full flex justify-center md:justify-start">
-            <div class="flex flex-col justify-center md:flex-row md:mx-6 md:space-x-8">
-              <div>
-                <h1 class="">
-                  <i class="fa-solid fa-user text-slate-600"></i> OWNER
-                  <p class="text-sm text-slate-500 md:mx-6">1st</p>
-                </h1>
+            <div
+              class="flex flex-wrap max-[500px]:mx-4 justify-around max-[500px]:justify-start max-[500px]:gap-8 my-12">
+
+              <div class="flex gap-x-3">
+                <img class="inline h-5 w-5 mt-1" src="./assets/images/footer/owner-icon.png" alt="Owner icon">
+                <div class="inline-block">
+                  <h3 class="text-base font-sans font-medium">Owner</h3>
+                  <p class="text-xs text-slate-600">1st</p>
+                </div>
               </div>
 
-              <div>
-                <h1 class=" ">
-                  <i class="fa-solid fa-location-dot text-slate-600"></i>
-                  Location
-                  <p class="text-sm text-slate-500 md:mx-6">India</p>
-                </h1>
+              <div class="flex gap-x-3">
+                <img class="inline h-5 w-5 mt-1" src="./assets/images/footer/location-icon.png"
+                  alt="Location icon">
+                <div class="inline-block">
+                  <h3 class="text-base font-sans font-medium">Location</h3>
+                  <p class="text-xs text-slate-600">India</p>
+                </div>
               </div>
 
-              <div>
-                <h1 class="">
-                  <i class="fa-solid fa-calendar-days text-slate-600"></i>Posting
-                  Date
-                  <p class="text-sm text-slate-500 md:mx-6">05 MAY 2023</p>
-                </h1>
+              <div class="flex gap-x-3">
+                <img class="inline h-5 w-5 mt-1" src="./assets/images/footer/calendar-icon.png"
+                  alt="Calendar icon">
+                <div class="inline-block">
+                  <h3 class="text-base font-sans font-medium">Posting Date</h3>
+                  <p class="text-xs text-slate-600">26 July 2023</p>
+                </div>
               </div>
 
             </div>
           </div>
 
-        </div>
-        <div class="flex flex-col sm:flex-col border 1px solid to-black bg-[#FDEBE7] ">
-          <h1 class="text-3xl text-slate-800 my-6 ml-[30px]">DETAIL</h1>
-          <p class="my-10 ml-[30px] text-[#656161] border 2px ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-            deleniti dolorem nulla quidem quas? Fugiat odit veniam accusamus
-            et reiciendis corporis perferendis quia. Dolores, iste harum
-            cupiditate reiciendis cum recusandae provident repudiandae
-            incidunt cumque inventore aliquam rem dicta vero dolorem quo
-            quibusdam ipsum tempore deserunt hic ex! Consequuntur, vitae nisi
-            asperiores neque quisquam consequatur nobis eius!
-          </p>
-        </div>
-      </div>
+          <!-- Details div  -->
+          <div class="md:w-[700px] bg-[#FDEBE7] rounded-sm shadow-sm">
+            <h1 class="text-3xl text-slate-900 font-semibold m-5 mb-0 ml-9">Detail</h1>
+            <h1 class="p-8 text-base font-sans text-slate-700">Lorem ipsum dolor sit amet consectetur
+              adipisicing elit.
+              Iusto atque
+              doloribus
+              laudantium
+              sequi corporis
+              incidunt voluptas tempora obcaecati dolorum necessitatibus, consectetur cumque, dolore totam similique
+              eligendi quaerat eius maxime? Sapiente incidunt, nobis aliquid blanditiis corrupti tempore eius excepturi
+              libero sed quod inventore beatae temporibus hic explicabo porro. Cumque, quasi rem. Lorem ipsum dolor sit,
+              amet consectetur adipisicing elit. Rerum architecto dolorem recusandae, illo ducimus aliquid temporibus
+              quas laboriosam nam quia? Facere, nemo repellat. Officiis natus temporibus cumque vero, consequuntur
+              reprehenderit distinctio nihil ducimus vitae vel dolores repellendus nulla excepturi perspiciatis.</h1>
 
-      <!--Right div-->
-      <div class="flex flex-col space-y-6 ">
-        <div
-          class="w-[380px] h-[150px] border flex-col flex items-center justify-center bg-[#FDEBE7] font-extrabold rounded-md">
-          <i class="fa fa-inr text-3xl text-slate-800" aria-hidden="true">20,69,000</i>
-          <div class="justify-center flex">
-            <button
-              class="bg-white hover:bg-red-200 text-slate-800 py-4 px-32 border border-slate-100 rounded-md flex flex-col">
-              Make Offer
-            </button>
+          </div>
+
+
+        </div>
+
+        <!-- right div  -->
+        <div class="w-[400px] max-[400px]:w-full flex flex-col items-center gap-y-10">
+          <!-- price div  -->
+          <div class="w-[350px] max-[400px]:w-full bg-[#FDEBE7] p-5 shadow-sm rounded-sm">
+            <h1 class="text-3xl font-semibold  ml-9">&#x20B9; 20,000,00</h1>
+            <div class="w-full flex justify-center mt-6">
+              <button
+                class="h-12 w-[90%] hover:text-white rounded-md hover:bg-[#f14435] border-opacity-20 border border-[#f14435]">
+                <p class="font-medium font-sans">Make Offer</p>
+              </button>
+            </div>
+          </div>
+
+          <!-- seller div  -->
+          <div class="w-[350px] max-[400px]:w-full bg-[#fdebe7] p-5 rounded-sm shadow-sm">
+
+            <div class="flex items-center gap-x-3">
+              <img class="w-16 ml-7" src="./assets/images/footer/seller-img.png" alt="Seller's image">
+              <h1 class="text-3xl font-semibold">Seller</h1>
+            </div>
+            <div class="w-full flex justify-center mt-6">
+              <button
+                class="h-12 w-[90%] hover:text-white rounded-md hover:bg-[#f14435] border-opacity-20 border border-[#f14435]">
+                <p class="font-medium font-sans">Chat With Seller</p>
+              </button>
+            </div>
           </div>
         </div>
-        <div class="border flex flex-col items-center bg-[#FDEBE7] font-semibold rounded-md w-[380px] h-[200px]">
-          <div class="flex items-center justify-center mr-40">
-            <img class="scale-50" src="./assets/images/seventh-page/Picture2.png" alt="" />
-            <p class="flex flex-col justify-center items-center text-3xl text-slate-800">seller</p>
-          </div>
-          <div class="flex flex-col justify-center">
-            <button class=" bg-white hover:bg-red-200 text-slate-800 border border-slate-100 rounded py-2 px-20 ">
-              Chat With Seller
-            </button>
-          </div>
-        </div>
+
       </div>
     </div>
   </div>
@@ -352,7 +383,7 @@
 
         <div class="flex md:w-full flex-col md:flex-row md:justify-between gap-x-2">
           <div class="max-[320px]:overflow-hidden">
-            <img class="w-80 xl:w-96" src="./assets/images/footer/footer hello.png" alt />
+            <img class="w-80 xl:w-96" src="./assets/images/footer/signup.png" alt />
           </div>
 
           <div class="flex justify-center items-center w-80 xl:w-[28rem] max-w-full ">
@@ -360,7 +391,7 @@
               <h4 class="flex font-bold text-slate-800 text-xl lg:text-2xl xl:text-3xl mb-2 xl:mb-4 mt-7 md:mt-0">
                 TRY
                 THE
-                UP HELLO APP</h4>
+                UP Hello APP</h4>
               <p class="text-sm xl:text-lg">
                 Buy, Sell and find just about anything using the app on your Mobile
               </p>
@@ -413,12 +444,12 @@
 
           <div class="">
             <h1 class="font-semibold text-base text-slate-800">ABOUT US</h1>
-            <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">About UP HELLO</p>
+            <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">About UP Hello</p>
             <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Contact Us</p>
           </div>
 
           <div class="">
-            <h1 class="font-semibold text-base text-slate-800">UP HELLO</h1>
+            <h1 class="font-semibold text-base text-slate-800">UP Hello</h1>
             <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Help</p>
             <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Privacy & Policy</p>
             <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Blog</p>
