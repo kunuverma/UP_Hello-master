@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <title>Sell</title>
 </head>
 
@@ -15,122 +12,190 @@
 
     <div class="w-full h-[70px] bg-[#f14435] flex items-center">
         <div class="ml-11">
-            <a href="javascript:history.go(-1)"><i class="fa-solid fa-arrow-left scale-150"
-                    style="color: #ffffff;"></i></a>
+            <a href="javascript:history.go(-1)"><img class="w-6" src="./assets/images/sell-page/arrow.png"
+                    alt="left-arrow"></a>
         </div>
     </div>
 
-
-    <div class="text-center font-semibold mt-[60px] text-[30px]">
-        POST YOUR ADD
+    <div class="text-center font-semibold my-14 text-[30px]">
+        POST YOUR AD
     </div>
-    <div class="flex flex-col items-center justify-center">
-        <h1 class="text-lg mt-[60px] font-semibold">INCLUDE SOME DETAILS</h1>
-        <div class="mt-[30px]">
-            <h2 class="text-lg font-semibold">Brand *</h2>
-            <input type="text"
-                class="px-3 box h-[50px] w-[300px] md:w-[500px] border solid color border-[#656161] rounded-md">
-            </input>
+
+
+
+    <div class="flex justify-center">
+
+        <div
+            class="w-[100%] min-[500px]:w-[90%] md:w-[70%] lg:[60%] max-w-[1250px] flex flex-col gap-y-10 p-8 items-center bg-gray-100 border">
+
+            <h1 class="text-lg font-semibold text-gray-800">INCLUDE SOME DETAILS</h1>
+
+            <div class="flex flex-wrap justify-center gap-10 ">
+                <div>
+                    <h2 class="text-base font-medium ml-2 text-slate-800">Name *</h2>
+                    <input required="true" type="text" placeholder="Enter the name"
+                        class="px-3 h-[35px] w-[300px] min-[450px]:w-[400px] border border-gray-700 border-opacity-20 focus:outline-none ">
+                    </input>
+                </div>
+
+                <div>
+                    <h2 class="text-base font-medium ml-2 text-slate-800">Used age *</h2>
+                    <input required="true" type="text" placeholder="Enter the age used used"
+                        class="px-3 h-[35px] w-[300px] min-[450px]:w-[400px] border border-gray-700 border-opacity-20 focus:outline-none ">
+                    </input>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-10">
+                <div>
+                    <h2 class="text-base font-medium ml-2 text-slate-800">Cost *</h2>
+                    <input required="true" type="text" placeholder="Enter the product cost"
+                        class="px-3 h-[35px] w-[300px] min-[450px]:w-[400px] border border-gray-700 border-opacity-20 focus:outline-none ">
+                    </input>
+                </div>
+
+                <div>
+                    <h2 class="text-base font-medium ml-2 text-slate-800">Model number *</h2>
+                    <input required="true" type="text" placeholder="Enter model number"
+                        class="px-3 h-[35px] w-[300px] min-[450px]:w-[400px] border  border-gray-700 border-opacity-20 focus:outline-none ">
+                    </input>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-10">
+                <div>
+                    <h2 class="text-base font-medium ml-2 text-slate-800">Category *</h2>
+                    <Select required="true" type="text"
+                        class=" px-2 h-[35px] text-gray-400 w-[300px] min-[450px]:w-[400px] border border-gray-700 border-opacity-20 focus:outline-none rounded-sm">
+                        <option class="text-gray-400" disabled selected value="">Select the category
+                        </option>
+                        <option class="text-gray-900" value="category1">Category1</option>
+                        <option class="text-gray-900" value="category2">Category2</option>
+                        <option class="text-gray-900" value="category3">Category3</option>
+                        <option class="text-gray-900" value="category4">Category4</option>
+                    </Select>
+                </div>
+
+                <div>
+                    <h2 class="text-base font-medium ml-2 text-slate-800">Sub Category *</h2>
+                    <Select required="true" type="text"
+                        class=" px-2 h-[35px] text-gray-400 w-[300px] min-[450px]:w-[400px] border border-gray-700 border-opacity-20 focus:outline-none rounded-sm">
+                        <option class="text-gray-400" disabled selected value="">Select the category
+                        </option>
+                        <option class="text-gray-900" value="subcategory1">Sub category1</option>
+                        <option class="text-gray-900" value="subcategory2">Sub category2</option>
+                        <option class="text-gray-900" value="subcategory3">Sub category3</option>
+                        <option class="text-gray-900" value="subcategory4">Sub category4</option>
+                    </Select>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-base font-medium ml-2 text-slate-800">Discription *</h2>
+                <textarea placeholder="Enter the discription of product" name="discription" id=""
+                    class="px-3 pt-1 w-[300px] min-[450px]:w-[400px] min-[1312px]:w-[840px] h-52 border border-gray-700 border-opacity-20 focus:outline-none"></textarea>
+            </div>
+
+
+            <div>
+                <div class="w-full flex justify-center mb-2">
+                    <h1 class="text-lg font-semibold">UPLOAD UP TO 12 PHOTO</h1>
+                </div>
+
+
+                <div
+                    class="flex flex-wrap justify-center items-center w-[300px] min-[450px]:w-[400px] min-[1295px]:w-[800px]">
+
+                    <div class="m-2 w-[100px] h-[100px] border-[#656161] border flex items-center  justify-center">
+                        <input type="file" name="" id="file" class="absolute opacity-0 top-0">
+                        <label for="file"><img class="scale-50 cursor-pointer "
+                                src="./assets/images/sell-page/camera-logo.png" alt=""></label>
+                    </div>
+                    <div class="m-2 w-[100px] h-[100px] border-[#656161] border flex items-center  justify-center">
+                        <input type="file" name="" id="file" class="absolute opacity-0 top-0">
+                        <label for="file"><img class="scale-50 cursor-pointer "
+                                src="./assets/images/sell-page/camera-logo.png" alt=""></label>
+                    </div>
+                    <div class="m-2 w-[100px] h-[100px] border-[#656161] border flex items-center  justify-center">
+                        <input type="file" name="" id="file" class="absolute opacity-0 top-0">
+                        <label for="file"><img class="scale-50 cursor-pointer "
+                                src="./assets/images/sell-page/camera-logo.png" alt=""></label>
+                    </div>
+                    <div class="m-2 w-[100px] h-[100px] border-[#656161] border flex items-center  justify-center">
+                        <input type="file" name="" id="file" class="absolute opacity-0 top-0">
+                        <label for="file"><img class="scale-50 cursor-pointer "
+                                src="./assets/images/sell-page/camera-logo.png" alt=""></label>
+                    </div>
+                    <div class="m-2 w-[100px] h-[100px] border-[#656161] border flex items-center  justify-center">
+                        <input type="file" name="" id="file" class="absolute opacity-0 top-0">
+                        <label for="file"><img class="scale-50 cursor-pointer "
+                                src="./assets/images/sell-page/camera-logo.png" alt=""></label>
+                    </div>
+                    <div class="m-2 w-[100px] h-[100px] border-[#656161] border flex items-center  justify-center">
+                        <input type="file" name="" id="file" class="absolute opacity-0 top-0">
+                        <label for="file"><img class="scale-50 cursor-pointer "
+                                src="./assets/images/sell-page/camera-logo.png" alt=""></label>
+                    </div>
+                    <div class="m-2 w-[100px] h-[100px] border-[#656161] border flex items-center  justify-center">
+                        <input type="file" name="" id="file" class="absolute opacity-0 top-0">
+                        <label for="file"><img class="scale-50 cursor-pointer "
+                                src="./assets/images/sell-page/camera-logo.png" alt=""></label>
+                    </div>
+                    <div class="m-2 w-[100px] h-[100px] border-[#656161] border flex items-center  justify-center">
+                        <input type="file" name="" id="file" class="absolute opacity-0 top-0">
+                        <label for="file"><img class="scale-50 cursor-pointer "
+                                src="./assets/images/sell-page/camera-logo.png" alt=""></label>
+                    </div>
+                    <div class="m-2 w-[100px] h-[100px] border-[#656161] border flex items-center  justify-center">
+                        <input type="file" name="" id="file" class="absolute opacity-0 top-0">
+                        <label for="file"><img class="scale-50 cursor-pointer "
+                                src="./assets/images/sell-page/camera-logo.png" alt=""></label>
+                    </div>
+                    <div class="m-2 w-[100px] h-[100px] border-[#656161] border flex items-center  justify-center">
+                        <input type="file" name="" id="file" class="absolute opacity-0 top-0">
+                        <label for="file"><img class="scale-50 cursor-pointer "
+                                src="./assets/images/sell-page/camera-logo.png" alt=""></label>
+                    </div>
+                    <div class="m-2 w-[100px] h-[100px] border-[#656161] border flex items-center  justify-center">
+                        <input type="file" name="" id="file" class="absolute opacity-0 top-0">
+                        <label for="file"><img class="scale-50 cursor-pointer "
+                                src="./assets/images/sell-page/camera-logo.png" alt=""></label>
+                    </div>
+                    <div class="m-2 w-[100px] h-[100px] border-[#656161] border flex items-center  justify-center">
+                        <input type="file" name="" id="file" class="absolute opacity-0 top-0">
+                        <label for="file"><img class="scale-50 cursor-pointer "
+                                src="./assets/images/sell-page/camera-logo.png" alt=""></label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="mt-10">
+                <h2 class="text-base font-medium ml-2 text-slate-800">Location *</h2>
+                <Select required="true" type="text"
+                    class=" px-2 h-[35px] text-gray-400 w-[300px] min-[450px]:w-[400px] border border-gray-700 border-opacity-20 focus:outline-none rounded-sm">
+                    <option class="text-gray-400" disabled selected value="">Select the Location
+                    </option>
+                    <option class="text-gray-900" value="Delhi">Delhi</option>
+                    <option class="text-gray-900" value="Mumbai">Mumbai</option>
+                    <option class="text-gray-900" value="Panjab">Panjab</option>
+                    <option class="text-gray-900" value="Haryana">Haryana</option>
+                </Select>
+            </div>
+
+
+            <button
+                class="h-[40px] w-[300px] min-[450px]:w-[400px] focus:outline-none hover:text-white rounded-sm hover:bg-[#f14435] border-opacity-30 border border-[#f14435]">
+                <p class="font-medium text-xl font-sans">Post</p>
+            </button>
         </div>
-
-        <div class="mt-[60px]">
-            <h1 class="text-lg font-semibold">Ad Title *</h1>
-            <input type="text"
-                class="px-3 box h-[50px] w-[300px] md:w-[500px] border border-[#656161] rounded-md"></input>
-        </div>
-
-        <div class="mt-[60px]">
-            <h1 class="text-lg font-semibold">Description *</h1>
-
-            <textarea
-                class="pt-3 px-3 box h-[173px] w-[300px] md:w-[500px] border border-[#656161] rounded-md"></textarea>
-        </div>
-
-        <div>
-            <h1 class="text-lg mt-[40px] font-semibold">SET A PRICE</h1>
-            <h2 class="text-lg mt-[30px] font-semibold">Price *</h2>
-            <input type="text"
-                class="px-3 box h-[50px] w-[300px] md:w-[500px] border 1px solid color border-[#656161] rounded-md"></input>
-        </div>
-
-        <h1 class="text-lg mt-[60px] font-semibold">UPLOAD UP TO 12 PHOTO</h1>
-
-        <div class="flex flex-wrap w-[80%] md:w-[60%] lg:w-[40%] md items-center justify-center">
-
-            <div class="m-2 w-[100px] h-[100px] border-[#656161] border flex items-center  justify-center">
-                <input type="file" name="" id="file" class="absolute opacity-0 top-0">
-                <label for="file"><img class="scale-50 cursor-pointer " src="./assets/images/sell-page/camera-logo.png"
-                        alt=""></label>
-            </div>
-            <div class="m-2 w-[100px] h-[100px] border-[#656161] border flex items-center  justify-center">
-                <input type="file" name="" id="file" class="absolute opacity-0 top-0">
-                <label for="file"><img class="scale-50 cursor-pointer " src="./assets/images/sell-page/camera-logo.png"
-                        alt=""></label>
-            </div>
-            <div class="m-2 w-[100px] h-[100px] border-[#656161] border flex items-center  justify-center">
-                <input type="file" name="" id="file" class="absolute opacity-0 top-0">
-                <label for="file"><img class="scale-50 cursor-pointer " src="./assets/images/sell-page/camera-logo.png"
-                        alt=""></label>
-            </div>
-            <div class="m-2 w-[100px] h-[100px] border-[#656161] border flex items-center  justify-center">
-                <input type="file" name="" id="file" class="absolute opacity-0 top-0">
-                <label for="file"><img class="scale-50 cursor-pointer " src="./assets/images/sell-page/camera-logo.png"
-                        alt=""></label>
-            </div>
-            <div class="m-2 w-[100px] h-[100px] border-[#656161] border flex items-center  justify-center">
-                <input type="file" name="" id="file" class="absolute opacity-0 top-0">
-                <label for="file"><img class="scale-50 cursor-pointer " src="./assets/images/sell-page/camera-logo.png"
-                        alt=""></label>
-            </div>
-            <div class="m-2 w-[100px] h-[100px] border-[#656161] border flex items-center  justify-center">
-                <input type="file" name="" id="file" class="absolute opacity-0 top-0">
-                <label for="file"><img class="scale-50 cursor-pointer " src="./assets/images/sell-page/camera-logo.png"
-                        alt=""></label>
-            </div>
-            <div class="m-2 w-[100px] h-[100px] border-[#656161] border flex items-center  justify-center">
-                <input type="file" name="" id="file" class="absolute opacity-0 top-0">
-                <label for="file"><img class="scale-50 cursor-pointer " src="./assets/images/sell-page/camera-logo.png"
-                        alt=""></label>
-            </div>
-            <div class="m-2 w-[100px] h-[100px] border-[#656161] border flex items-center  justify-center">
-                <input type="file" name="" id="file" class="absolute opacity-0 top-0">
-                <label for="file"><img class="scale-50 cursor-pointer " src="./assets/images/sell-page/camera-logo.png"
-                        alt=""></label>
-            </div>
-            <div class="m-2 w-[100px] h-[100px] border-[#656161] border flex items-center  justify-center">
-                <input type="file" name="" id="file" class="absolute opacity-0 top-0">
-                <label for="file"><img class="scale-50 cursor-pointer " src="./assets/images/sell-page/camera-logo.png"
-                        alt=""></label>
-            </div>
-            <div class="m-2 w-[100px] h-[100px] border-[#656161] border flex items-center  justify-center">
-                <input type="file" name="" id="file" class="absolute opacity-0 top-0">
-                <label for="file"><img class="scale-50 cursor-pointer " src="./assets/images/sell-page/camera-logo.png"
-                        alt=""></label>
-            </div>
-            <div class="m-2 w-[100px] h-[100px] border-[#656161] border flex items-center  justify-center">
-                <input type="file" name="" id="file" class="absolute opacity-0 top-0">
-                <label for="file"><img class="scale-50 cursor-pointer " src="./assets/images/sell-page/camera-logo.png"
-                        alt=""></label>
-            </div>
-            <div class="m-2 w-[100px] h-[100px] border-[#656161] border flex items-center  justify-center">
-                <input type="file" name="" id="file" class="absolute opacity-0 top-0">
-                <label for="file"><img class="scale-50 cursor-pointer " src="./assets/images/sell-page/camera-logo.png"
-                        alt=""></label>
-            </div>
-        </div>
-
-
-        <h1 class="text-lg mt-[60px] font-semibold">CONFIRM YOUR LOCATION</h1>
-        <input type="text"
-            class="px-3 box h-[50px] w-[300px] md:w-[500px] border 1px solid color border-[#656161] rounded"></input>
-        <button class="bg-[#f14435] text-lg rounded w-[150px] h-[50px] mt-[60px] hover:opacity-80">POST NOW</button>
-
+    </div>
 
     </div>
     <!--Footer-->
     <footer class="flex justify-center w-full h-[70px] bg-[#f14435] mt-[60px]">
-        <p class="text-white text-center mt-[25px]">All right reserve @2023-2029 UP HELLO</p>
+        <p class="text-white text-center mt-[25px]">All right reserve @2023-2029 UP Hello</p>
     </footer>
 </body>
 
-</html>
+</html
