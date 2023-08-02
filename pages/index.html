@@ -7,21 +7,18 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500&family=Roboto:wght@300&display=swap"
-        rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/a14832b3f9.js" crossorigin="anonymous"></script>
     <title>UP Hello</title>
 </head>
 
 <body>
-
-
     <!-- navbar starts -->
     <nav>
         <!-- Sidenav -->
         <div style="width: 0; transition: 0.8s; transition-timing-function:ease;" id="sideNav"
-            class="absolute h-full hidden min-h-fit right-0 z-10 shadow-lg bg-[#f14435]">
+            class="absolute h-full hidden min-h-fit right-0 z-[60] shadow-lg bg-[#f14435]">
 
             <!-- upper div  -->
             <div class="w-10 h-fit flex justify-center">
@@ -68,10 +65,17 @@
                     </select>
                 </div>
 
+                <!-- before login button  -->
                 <div>
                     <button class="text-white text-[17px] font-[600] hover:opacity-90">
                         <div class="border-b-[1px]">Login</div>
                     </button>
+                </div>
+
+                <!-- after login button  -->
+                <div class="w-[30%] flex items-center gap-x-2">
+                    <img class="w-9 h-9" src="./assets/images/navbar/profile-img-after-login.png" alt="Profile picture">
+                    <!-- <img class="w-5 h-5" src="./assets/images/navbar/arrow-down-white.png" alt="Down arrow"> -->
                 </div>
 
                 <div>
@@ -105,25 +109,80 @@
 
                 <div class="w-[60%] flex justify-around items-center max-[1130px]:hidden">
 
-                    <div class="w-[30%]">
-                        <div class="flex items-center h-[70px] w-full">
+                    <div class="w-[40%] flex items-center relative h-[70px] rounded-md">
+                        <div class="flex items-center h-[50px] rounded-md w-full bg-white">
+
                             <div class="bg-white rounded-l-[5px] h-[50px] w-[50px] flex items-center justify-center">
                                 <img src="./assets/images/navbar/search-icon.png" class="h-[20px] w-[20px]"
                                     alt="search-icon" />
                             </div>
 
-                            <div class="w-full">
-                                <select
-                                    class="w-full text-gray-700 bg-white h-[50px] rounded-r-[5px] text-lg font-semibold focus:outline-none"
-                                    name="country" id="country">
-                                    <option value="india">India</option>
-                                </select>
+                            <input type="text" value="Dwarka sector-7, Delhi, India"
+                                class="w-full h-[50px] flex items-center focus:outline-none pr-1">
+
+                            <div onclick="locationBoxToggle()" class="w-[60px]">
+                                <img id="location-arrow" class="w-7 h-7 duration-500 ease-in-out cursor-pointer"
+                                    src="./assets/images/navbar/down-arrow-black.png" alt="Drop down arrow black">
                             </div>
                         </div>
+
+                        <!-- Locatin box starts  -->
+                        <div id="location-box"
+                            class="w-full hidden opacity-in absolute top-0 mt-[60px] right-0 z-[100] h-[322px] shadow-md rounded-md bg-[#F8F3F3] overflow-y-auto">
+                            <!-- current location  -->
+                            <div class="p-3 hover:bg-slate-300">
+                                <a href="#" class="w-full flex items-center gap-x-3 ">
+                                    <i style="color: #3a77ff;" class="fa-solid fa-location-crosshairs fa-2xl"></i>
+                                    <div>
+                                        <p class="text-lg font-semibold text-[#3a77ff]">Use current location</p>
+                                        <p class="text-sm font-medium text-[#3a77ff]">Dwarka sector 7, Delhi, India</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Recent Locations  -->
+                            <hr class="border-black border-opacity-30">
+                            <div class="w-full flex items-center h-12">
+                                <p class="text-base ml-2 text-slate-500">Recent Locations</p>
+                            </div>
+                            <div class="w-full flex gap-x-4 items-center h-12 px-5 hover:bg-slate-200 cursor-pointer">
+                                <i style="color: #f14438;" class="fa-solid fa-location-dot fa-lg"></i>
+                                <p class="text-base text-slate-700">Delhi</p>
+                            </div>
+                            <div class="w-full flex gap-x-4 items-center h-12 px-5 hover:bg-slate-200 cursor-pointer">
+                                <i style="color: #f14438;" class="fa-solid fa-location-dot fa-lg"></i>
+                                <p class="text-base text-slate-700">Uttar Pradesh</p>
+                            </div>
+
+                            <!-- Popular Locations  -->
+                            <hr class="border-black border-opacity-30">
+                            <div class="w-full flex items-center h-12">
+                                <p class="text-base ml-2 text-slate-500">Popular Locations</p>
+                            </div>
+                            <div class="w-full flex gap-x-4 items-center h-12 px-5 hover:bg-slate-200 cursor-pointer">
+                                <i style="color: #f14438;" class="fa-solid fa-location-dot fa-lg"></i>
+                                <p class="text-base text-slate-700">Delhi</p>
+                            </div>
+                            <div class="w-full flex gap-x-4 items-center h-12 px-5 hover:bg-slate-200 cursor-pointer">
+                                <i style="color: #f14438;" class="fa-solid fa-location-dot fa-lg"></i>
+                                <p class="text-base text-slate-700">Mumbai</p>
+                            </div>
+                            <div class="w-full flex gap-x-4 items-center h-12 px-5 hover:bg-slate-200 cursor-pointer">
+                                <i style="color: #f14438;" class="fa-solid fa-location-dot fa-lg"></i>
+                                <p class="text-base text-slate-700">Koltaka</p>
+                            </div>
+                            <div class="w-full flex gap-x-4 items-center h-12 px-5 hover:bg-slate-200 cursor-pointer">
+                                <i style="color: #f14438;" class="fa-solid fa-location-dot fa-lg"></i>
+                                <p class="text-base text-slate-700">Uttar Pradesh</p>
+                            </div>
+                        </div>
+                        <!-- Location box ends -->
+
                     </div>
 
-                    <div class="flex justify-center items-center w-[65%]">
-                        <input placeholder="   Find cars, Mobile phones and more.."
+
+                    <div class="flex justify-center items-center w-[55%]">
+                        <input placeholder="Find cars, Mobile phones and more.."
                             class="h-[50px] w-full rounded-l-[5px] focus:outline-none pl-5 pr-5" type="text" />
 
                         <div class="bg-[#FDEBE7] h-[50px] w-[58.055px] rounded-r-[5px] flex place-content-center">
@@ -143,10 +202,18 @@
                         </select>
                     </div>
 
-                    <div class="w-[30%] flex justify-center">
+                    <!-- before login button  -->
+                    <div class="w-[30%] hidden justify-center ">
                         <button class="text-white text-[17px] font-[600] hover:opacity-80">
                             <div class="hover:border-b-[1px]">Login</div>
                         </button>
+                    </div>
+
+                    <!-- after login button  -->
+                    <div onclick="profileBoxToggle()" class="w-[30%] flex justify-center items-center gap-x-2">
+                        <img class="w-9 h-9" src="./assets/images/navbar/profile-img-after-login.png"
+                            alt="Profile picture">
+                        <img class="w-5 h-5" src="./assets/images/navbar/arrow-down-white.png" alt="">
                     </div>
 
                     <div class="w-[30%] flex justify-center flex-col">
@@ -161,20 +228,110 @@
             </div>
         </div>
 
+        <!-- Profile box starts -->
+        <div id="profile-box" class="w-full z-[60] hidden absolute right-0 opacity-in justify-center">
+            <div class="w-[85vw] max-w-[1256.72px] flex justify-end mr-32">
+                <div class="flex flex-col right-5 w-[288px] bg-[#F8F3F3] shadow-md">
+
+                    <div class="flex flex-col p-5 gap-y-3">
+                        <div class="flex items-center gap-x-4">
+                            <img class="w-14 h-14" src="./assets/images/navbar/profile-img.png" alt="Profile picture">
+                            <h3 class="text-xl font-semibold">Kunal Verma</h3>
+                        </div>
+
+                        <div>
+                            <button
+                                class="h-10 w-[100%] hover:text-white rounded-md hover:bg-[#f14435] border-opacity-20 border border-[#f14435]">
+                                <p class="font-medium font-sans">View and Edit Profile</p>
+                            </button>
+                        </div>
+
+                        <div class="flex flex-col gap-y-2">
+                            <p class="text-base font-semibold">2 Steps left</p>
+                            <div class="grid grid-cols-6 gap-1">
+                                <span class="bg-red-400 h-2"></span>
+                                <span class="bg-red-400 h-2"></span>
+                                <span class="bg-red-400 h-2"></span>
+                                <span class="bg-red-400 h-2"></span>
+                                <span class="bg-red-100 h-2"></span>
+                                <span class="bg-red-100 h-2"></span>
+                            </div>
+                            <p class="text-xs font-medium text-slate-600">We are built on trust, help one another to get
+                                to
+                                know
+                                each
+                                other better
+                            </p>
+                        </div>
+                    </div>
+
+                    <hr class=" border-black border-opacity-30">
+
+                    <button class="w-full flex h-12 justify-center hover:bg-[#fdebe7]">
+                        <div class="w-[85%] h-full flex gap-x-4 items-center">
+                            <i class="fa-regular fa-heart fa-lg" style="color: #f14438;"></i>
+                            <h3 class="text-base font-medium text-slate-800">My ADS</h3>
+                        </div>
+                    </button>
+                    <button class="w-full flex h-12 justify-center hover:bg-[#fdebe7]">
+                        <div class="w-[85%] h-full flex gap-x-4 items-center">
+                            <i class="fa-solid fa-clipboard-list fa-lg" style="color: #f14438;"></i>
+                            <h3 class="text-base font-medium text-slate-800">Buy Business and Packages</h3>
+                        </div>
+                    </button>
+                    <button class="w-full flex h-12 justify-center hover:bg-[#fdebe7]">
+                        <div class="w-[85%] h-full flex gap-x-4 items-center">
+                            <i class="fa-solid fa-box fa-lg" style="color: #f14438;"></i>
+                            <h3 class="text-base font-medium text-slate-800">Bought
+                                Packages and Billing</h3>
+                        </div>
+                    </button>
+
+                    <hr class=" border-black border-opacity-30">
+
+                    <button class="w-full flex h-12 justify-center hover:bg-[#fdebe7]">
+                        <div class="w-[85%] h-full flex gap-x-4 items-center">
+                            <i class="fa-regular fa-circle-question fa-lg" style="color: #f14438;"></i>
+                            <h3 class="text-base font-medium text-slate-800">Help</h3>
+                        </div>
+                    </button>
+                    <button class="w-full flex h-12 justify-center hover:bg-[#fdebe7]">
+                        <div class="w-[85%] h-full flex gap-x-4 items-center">
+                            <i class="fa-solid fa-gear fa-lg" style="color: #f14438;"></i>
+                            <h3 class="text-base font-medium text-slate-800 ">Setting</h3>
+                        </div>
+                    </button>
+                    <button class="w-full flex h-12 justify-center hover:bg-[#fdebe7]">
+                        <div class="w-[85%] h-full flex gap-x-4 items-center">
+                            <i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180 fa-lg"
+                                style="color: #f14438;"></i>
+                            <h3 class="text-base font-medium text-slate-800">Logout</h3>
+                        </div>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <!-- Profile box ends  -->
+
+
+
+
+
+
         <!-- Lower navbar -->
         <div class="flex justify-center items-center shadow-lg bg-[#F8F3F3] w-full">
 
             <div
-                class="flex max-[1130px]:flex-col min-[1131px]:items-center text-base gap-5 max-w-[1256.72px] w-[85vw] py-3">
+                class="flex max-[1190px]:flex-col min-[1190px]:items-center text-base gap-5 max-w-[1256.72px] w-[85vw] py-3">
 
-                <div>
-                    <select name="category"
-                        class="bg-transparent max-[1130px]:mt-3 max-[1130px]:-ml-1 text-[#F14435] hover:text-gray-900 text-lg cursor-pointer focus:outline-none font-semibold">
-                        <option class="text-base" value="all-category">All Category</option>
-                    </select>
+                <div class="flex items-center gap-x-2 cursor-pointer" onclick="allCategory()">
+                    <h1 class="text-[#f14435] text-lg font-sans font-medium">All Category</h1>
+                    <button><img class="w-6 h-6 mt-1 duration-500" id="drop-down-icon"
+                            src="./assets/images/navbar/drop-down-icon.png" alt="Drop down arrow"></button>
                 </div>
 
-                <div>
+                <div class="ml-5 max-[1190px]:ml-0">
                     <a href="./cars.html"><button class="text-slate-600 hover:text-[#f14435]">Cars</button></a>
                 </div>
 
@@ -209,8 +366,233 @@
     </nav>
     <!-- Navbar ends -->
 
-
     <!-- Body starts  -->
+
+    <!-- Dropdown starts  -->
+    <div id="drop-down-page" class="w-[100%] hidden opacity-in justify-center absolute z-50">
+        <div class="w-[100%] sm:w-[92%] bg-[#F8F3F3] border border-t-0 flex flex-wrap gap-20 p-7">
+
+            <!-- Properties Category  -->
+
+            <div class="flex flex-col gap-1">
+                <h3 class="text-base font-semibold mb-1">Properties</h3>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">For Sale: Apartments & Houses</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">For Rent: Apartments & Houses</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Lands & Plots</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">For Sale: Shops and Offices</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">For Rent: Shops and Offices</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">PG and Guest Houses</P>
+                </a>
+            </div>
+
+            <!-- Services Category  -->
+            <div class="flex flex-col gap-1">
+                <h3 class="text-base font-semibold mb-1">Services</h3>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Education & classes</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Tours and Travel</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Electronics Repair and Services</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Health & Beauty</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Home Renovation & Repair</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Cleaning & Pest Control</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Legal & Documentation Services</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Packer & Movers</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Other Services</p>
+                </a>
+            </div>
+
+
+            <!-- Jobs Category  -->
+            <div class=" flex flex-col gap-1">
+                <h3 class="text-base font-semibold mb-1">Jobs</h3>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Data Entry and back office</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Sales and marketing</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">BPO and telecaller</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Driver</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Office Assistant</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Delivery and collection</P>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Teacher</P>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Cook </p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Other Jobs</P>
+                </a>
+            </div>
+
+            <!-- Bikes Category  -->
+            <div class="flex flex-col gap-1">
+                <h3 class="text-base font-semibold mb-1">Jobs</h3>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Motorcycles</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Scooters</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Spare Parts</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Bicycle</p>
+                </a>
+            </div>
+
+            <!-- Electronics and Appliances Category  -->
+            <div class="flex flex-col gap-1">
+                <h3 class="text-base font-semibold mb-1">Electronics and Appliances</h3>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">TV's Video-Audio</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Kitchen and Other Appliances</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Cameras and Lenses</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Games and Entertainment</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Fridges</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Computer accessorires</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Hard Disks, Printer & Monitors</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">ACs</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Washing Machines</p>
+                </a>
+            </div>
+
+            <!-- Commercial Vehicles and Spares Category  -->
+            <div class="flex flex-col gap-1">
+                <h3 class="text-base font-semibold mb-1">Commercial Vehicles & Spares</h3>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Commercial & Other Vehicles</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Spares</p>
+                </a>
+            </div>
+
+            <!-- Furniture Category  -->
+            <div class="flex flex-col gap-1">
+                <h3 class="text-base font-semibold mb-1">Furniture</h3>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Sofa & Dining</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Beds & Wardrops</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Home Decor & Garder</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Kids Furniture/p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Other Households items</p>
+                </a>
+            </div>
+
+            <!-- Fashion Category  -->
+            <div class="flex flex-col gap-1">
+                <h3 class="text-base font-semibold mb-1">Fashion</h3>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Men</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Women</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Kids</p>
+                </a>
+            </div>
+
+            <!-- Books, Sports & Hobbies Category  -->
+            <div class="flex flex-col gap-1">
+                <h3 class="text-base font-semibold mb-1">Books, Sports & Hobbies</h3>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Books</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Gym & Fitness</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Musical Instruments</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Sports Equipments</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Other Hobbies</p>
+                </a>
+            </div>
+
+            <!-- Mobiles  -->
+            <div class="flex flex-col gap-1">
+                <h3 class="text-base font-semibold mb-1">Mobiles</h3>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Mobile Phones</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Accessorires</p>
+                </a>
+                <a href="#">
+                    <p class="text-sm hover:text-[#f14435]">Tablets</p>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <!-- Dropdown ends  -->
+
     <div class="flex justify-center">
         <div class="max-w-[1229.4px]">
             <div class="flex justify-center">
@@ -233,7 +615,7 @@
                                 class="w-[281px] bg-[#FFFFFF] mt-5 rounded-md overflow-hidden hover:scale-[1.02] hover:drop-shadow-lg duration-75 cursor-pointer p-2">
                                 <a href="seventhpage.html">
                                     <div class="relative">
-                                        <img class="absolute top-1 right-1 w-8 h-8 aspect-square"
+                                        <img class="absolute top-1 hover:scale-110 right-1 w-8 h-8 aspect-square ease-out duration-100"
                                             onclick="onFavClick(e)" src="./assets/images/index-page/fav-btn.png" alt="">
                                         <img class="w-full h-[132px] aspect-video object-cover"
                                             src="assets/images/index-page/bike-img.png" alt="Bike image" />
@@ -301,7 +683,7 @@
                                     <div class="relative">
                                         <img class="absolute top-1 right-1 w-8 h-8 aspect-square" onclick="onFavClick"
                                             src="./assets/images/index-page/fav-btn.png" alt="">
-                                        <img class="w-full h-[132px] aspect-video object-cover"
+                                        <img class="w-full h-[132px] -z-10 aspect-video object-cover"
                                             src="assets/images/index-page/bike-img.png" alt="Bike image" />
                                     </div>
                                     <div class="m-2">
@@ -320,7 +702,6 @@
 
                 </div>
             </div>
-
 
             <!-- Fresh recommendations -->
             <div class="flex justify-center mt-10">
@@ -836,7 +1217,7 @@
 
                 <div class="flex md:w-full flex-col md:flex-row md:justify-between gap-x-2">
                     <div class="max-[320px]:overflow-hidden">
-                        <img class="w-80 xl:w-96" src="./assets/images/footer/footer hello.png" alt />
+                        <img class="w-80 xl:w-96" src="./assets/images/footer/signup.png" alt />
                     </div>
 
                     <div class="flex justify-center items-center w-80 xl:w-[28rem] max-w-full ">
@@ -845,7 +1226,7 @@
                                 class="flex font-bold text-slate-800 text-xl lg:text-2xl xl:text-3xl mb-2 xl:mb-4 mt-7 md:mt-0">
                                 TRY
                                 THE
-                                HELLO APP</h4>
+                                UP Hello APP</h4>
                             <p class="text-sm xl:text-lg">
                                 Buy, Sell and find just about anything using the app on your Mobile
                             </p>
@@ -898,14 +1279,15 @@
 
                     <div class="">
                         <h1 class="font-semibold text-base text-slate-800">ABOUT US</h1>
-                        <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">About HELLO</p>
+                        <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">About UP Hello</p>
                         <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Contact Us</p>
                     </div>
 
                     <div class="">
-                        <h1 class="font-semibold text-base text-slate-800">HELLO</h1>
+                        <h1 class="font-semibold text-base text-slate-800">UP Hello</h1>
                         <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Help</p>
-                        <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Privacy & Policy</p>
+                        <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Privacy & Policy
+                        </p>
                         <p class="text-[#656161] mt-1 cursor-pointer hover:text-red-500 text-xs">Blog</p>
                     </div>
 
